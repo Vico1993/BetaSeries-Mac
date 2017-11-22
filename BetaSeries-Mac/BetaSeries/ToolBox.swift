@@ -14,6 +14,17 @@ func var_dump(_ data:[String:Any] ) {
     })
 }
 
+func convertStringToDictionary(json: String) -> [String: AnyObject]? {
+    if let data = json.data(using: String.Encoding.utf8) {
+        do {
+            return try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject]
+        } catch {
+            print( "Error Parsing Json" )
+        }
+    }
+    return nil
+}
+
 extension NSMutableURLRequest {
     func debugHttpBody ( ) -> String {
         return String(data: httpBody!, encoding: String.Encoding.utf8) as String!

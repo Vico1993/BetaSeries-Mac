@@ -19,56 +19,44 @@ struct BetaSeriesClient {
         APIKey = ApiKey
         
         let url = base_url + "members/auth"
-        var params:[String:String] = [
+        let params:[String:String] = [
             "login": username,
             "password": password.md5
         ]
         MakeRequestWith(url: url, requestMethod: "POST", params:params)
     }
     
-    func MakeRequestWith( url:String, requestMethod:String, params:[String:String] ) {
+    mutating func MakeRequestWith( url:String, requestMethod:String, params:[String:String] ) {
         
-        let request = NSMutableURLRequest(url: URL(string: url)!)
+        guard let url = URL(string: url) else {
+            print("Error! Invalid URL!") //Do something else
+            return
+        }
+        
+        let semaphore = DispatchSemaphore(value: 0)
+        var request = URLRequest(url: url)
         request.httpMethod = requestMethod
         request.httpBody = try? JSONSerialization.data(withJSONObject: params)
         
         request.addValue("application/json", forHTTPHeaderField:"Content-Type" )
         request.addValue(APIKey, forHTTPHeaderField: "X-BetaSeries-Key")
         
-        print( request.debugHttpBody() )
+        var data: Data? = nil
+        URLSession.shared.dataTask(with: request) { (responseData, _, _) -> Void in
+            data = responseData
+            semaphore.signal()
+        }.resume()
         
-        let requestAPI = URLSession.shared.dataTask(with: request as URLRequest) {data, response, error in
-            if (error != nil) {
-                // If error, show some details..
-                print(error!.localizedDescription)
-            }
-            
-            if let httpStatus = response as? HTTPURLResponse , httpStatus.statusCode != 200 {
-                // If HttpStatusCode != 200 -> Showing some details to debug
-                print("StatusCode := \(httpStatus.statusCode)")
-                print("Details := \(String(describing: response))")
-            }
-            
-            let responseAPI = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            print("return of API :")
-            print( responseAPI! )
-            
-//            if error == nil {
-//                // Ce que vous voulez faire.
-//            }
+        _ = semaphore.wait(timeout: .distantFuture)
+        let reply = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)! as String
+        if let dataJson = convertStringToDictionary(json: reply) {
+            token = dataJson[ "token" ] as? String ?? ""
         }
-        
-        requestAPI.resume()
     }
     
     mutating func GetListSeries( ) {
         print("GetListSeries")
-        print(token)
         
-        token = "TATA"
-        
-        print("test2")
-        print(token)
     }
     
     func GetEpisodesOfSerie( ) {
