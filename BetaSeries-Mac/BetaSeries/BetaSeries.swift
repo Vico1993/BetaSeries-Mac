@@ -28,20 +28,10 @@ struct BetaSeriesClient {
     
     func MakeRequestWith( url:String, requestMethod:String, params:[String:String] ) {
         
-//        var paramString: String = ""
-//        params.forEach { (key:String, val:String) in
-//            if ( paramString != "" ) {
-//                paramString += "&"
-//            }
-//            paramString += "\(key)=\(val)"
-//        }
-        
         let request = NSMutableURLRequest(url: URL(string: url)!)
         request.httpMethod = requestMethod
-//        request.httpBody = paramString.data(using: .utf8)
         request.httpBody = try? JSONSerialization.data(withJSONObject: params)
         
-//        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField:"Content-Type" )
         request.addValue("application/json", forHTTPHeaderField:"Content-Type" )
         request.addValue(APIKey, forHTTPHeaderField: "X-BetaSeries-Key")
         
