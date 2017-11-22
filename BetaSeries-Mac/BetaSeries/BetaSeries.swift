@@ -21,12 +21,14 @@ struct BetaSeriesClient {
         let url = base_url + "members/auth"
         var params:[String:Any] = [
             "login": username,
-            "password": md5(password)
+            "password": password.md5
         ]
         MakeRequestWith(url: url, requestMethod: "POST", params:params)
     }
     
     func MakeRequestWith( url:String, requestMethod:String, params:[String:Any] ) {
+        
+        var_dump(params)
         
         let request = NSMutableURLRequest(url: URL(string: url)!)
         request.httpMethod = requestMethod

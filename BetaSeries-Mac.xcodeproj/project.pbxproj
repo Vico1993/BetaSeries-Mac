@@ -292,7 +292,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "vpiolin.BetaSeries-Mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/victorpiolin/Code/Cocoa Apps/BetaSeries-Mac/BetaSeries-Mac/BetaSeries-Mac-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -308,7 +308,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "vpiolin.BetaSeries-Mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/victorpiolin/Code/Cocoa Apps/BetaSeries-Mac/BetaSeries-Mac/BetaSeries-Mac-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
