@@ -19,23 +19,32 @@ struct BetaSeriesClient {
         APIKey = ApiKey
         
         let url = base_url + "members/auth"
-        var params:[String:Any] = [
+        var params:[String:String] = [
             "login": username,
             "password": password.md5
         ]
         MakeRequestWith(url: url, requestMethod: "POST", params:params)
     }
     
-    func MakeRequestWith( url:String, requestMethod:String, params:[String:Any] ) {
+    func MakeRequestWith( url:String, requestMethod:String, params:[String:String] ) {
         
-        var_dump(params)
+        var paramString: String = ""
+        params.forEach { (key:String, val:String) in
+            if ( paramString != "" ) {
+                paramString += "&"
+            }
+            paramString += "\(key)=\(val)"
+        }
         
         let request = NSMutableURLRequest(url: URL(string: url)!)
         request.httpMethod = requestMethod
-        request.httpBody = try? JSONSerialization.data(withJSONObject: params)
+        request.httpBody = paramString.data(using: .utf8)
+//        request.httpBody = try? JSONSerialization.data(withJSONObject: params)
         
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField:"Content-Type" )
         request.addValue(APIKey, forHTTPHeaderField: "X-BetaSeries-Key")
+        
+        print( request.debugHttpBody() )
         
         let requestAPI = URLSession.shared.dataTask(with: request as URLRequest) {data, response, error in
             if (error != nil) {
