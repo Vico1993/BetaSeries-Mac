@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1DC7A8EA1FC5DECE00ED8AD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7A8E91FC5DECE00ED8AD3 /* AppDelegate.swift */; };
-		1DC7A8EC1FC5DECE00ED8AD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7A8EB1FC5DECE00ED8AD3 /* ViewController.swift */; };
 		1DC7A8EF1FC5DECE00ED8AD3 /* BetaSeries_Mac.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7A8ED1FC5DECE00ED8AD3 /* BetaSeries_Mac.xcdatamodeld */; };
 		1DC7A8F11FC5DECE00ED8AD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7A8F01FC5DECE00ED8AD3 /* Assets.xcassets */; };
 		1DC7A8F41FC5DECE00ED8AD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7A8F21FC5DECE00ED8AD3 /* Main.storyboard */; };
+		1DC7A8FD1FC5E08E00ED8AD3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7A8FC1FC5E08E00ED8AD3 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1DC7A8E61FC5DECE00ED8AD3 /* BetaSeries-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BetaSeries-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC7A8E91FC5DECE00ED8AD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1DC7A8EB1FC5DECE00ED8AD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1DC7A8EE1FC5DECE00ED8AD3 /* BetaSeries_Mac.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BetaSeries_Mac.xcdatamodel; sourceTree = "<group>"; };
 		1DC7A8F01FC5DECE00ED8AD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DC7A8F31FC5DECE00ED8AD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1DC7A8F51FC5DECE00ED8AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DC7A8F61FC5DECE00ED8AD3 /* BetaSeries_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetaSeries_Mac.entitlements; sourceTree = "<group>"; };
+		1DC7A8FC1FC5E08E00ED8AD3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +56,12 @@
 			isa = PBXGroup;
 			children = (
 				1DC7A8E91FC5DECE00ED8AD3 /* AppDelegate.swift */,
-				1DC7A8EB1FC5DECE00ED8AD3 /* ViewController.swift */,
 				1DC7A8F01FC5DECE00ED8AD3 /* Assets.xcassets */,
 				1DC7A8F21FC5DECE00ED8AD3 /* Main.storyboard */,
 				1DC7A8F51FC5DECE00ED8AD3 /* Info.plist */,
 				1DC7A8F61FC5DECE00ED8AD3 /* BetaSeries_Mac.entitlements */,
 				1DC7A8ED1FC5DECE00ED8AD3 /* BetaSeries_Mac.xcdatamodeld */,
+				1DC7A8FC1FC5E08E00ED8AD3 /* LoginViewController.swift */,
 			);
 			path = "BetaSeries-Mac";
 			sourceTree = "<group>";
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DC7A8EC1FC5DECE00ED8AD3 /* ViewController.swift in Sources */,
+				1DC7A8FD1FC5E08E00ED8AD3 /* LoginViewController.swift in Sources */,
 				1DC7A8EF1FC5DECE00ED8AD3 /* BetaSeries_Mac.xcdatamodeld in Sources */,
 				1DC7A8EA1FC5DECE00ED8AD3 /* AppDelegate.swift in Sources */,
 			);
