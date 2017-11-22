@@ -23,14 +23,16 @@ struct BetaSeriesClient {
             "login": username,
             "password": password.md5
         ]
-        MakeRequestWith(url: url, requestMethod: "POST", params:params)
+        if let ret = MakeRequestWith(url: url, requestMethod: "POST", params:params) {
+            token = ret[ "token" ] as? String ?? ""
+        }
     }
     
-    mutating func MakeRequestWith( url:String, requestMethod:String, params:[String:String] ) {
-        
+    func MakeRequestWith( url:String, requestMethod:String, params:[String:String] ) -> [String : AnyObject]? {
+        // Verification de l'url
         guard let url = URL(string: url) else {
             print("Error! Invalid URL!") //Do something else
-            return
+            return nil
         }
         
         let semaphore = DispatchSemaphore(value: 0)
@@ -50,8 +52,10 @@ struct BetaSeriesClient {
         _ = semaphore.wait(timeout: .distantFuture)
         let reply = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)! as String
         if let dataJson = convertStringToDictionary(json: reply) {
-            token = dataJson[ "token" ] as? String ?? ""
+            return dataJson
         }
+        
+        return nil
     }
     
     mutating func GetListSeries( ) {
