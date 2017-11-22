@@ -39,7 +39,7 @@ struct BetaSeriesClient {
         var request = URLRequest(url: url)
         request.httpMethod = requestMethod
         request.httpBody = try? JSONSerialization.data(withJSONObject: params)
-        
+
         request.addValue("application/json", forHTTPHeaderField:"Content-Type" )
         request.addValue(APIKey, forHTTPHeaderField: "X-BetaSeries-Key")
         
@@ -58,9 +58,25 @@ struct BetaSeriesClient {
         return nil
     }
     
-    mutating func GetListSeries( ) {
+    func GetListSeries( ) {
         print("GetListSeries")
+        var shows = [String]()
         
+        let url = base_url + "episodes/list"
+        let params:[String:String] = [
+            "token" : token
+        ]
+        
+        if let ret = MakeRequestWith(url: url, requestMethod: "GET", params:params) {
+            let episodes = ret["shows"] as? [[String: Any]] ?? []
+            for episode in episodes {
+                if let title = episode["title"] as? String {
+                    shows.append(title)
+                }
+            }
+        }
+        
+        print(shows)
     }
     
     func GetEpisodesOfSerie( ) {
