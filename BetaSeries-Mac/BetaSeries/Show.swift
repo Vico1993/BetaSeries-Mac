@@ -8,6 +8,15 @@
 
 import Foundation
 
-class show {
+class Show {
+    var Id:Int
+    var Title:String
+    var EpisodesUnseen:[Episode]
+    
+    init( id:Int, title:String, episodesunseen:[Episode] ) {
+        self.Id = id
+        self.Title = title
+        self.EpisodesUnseen = episodesunseen
+    }
     
 }

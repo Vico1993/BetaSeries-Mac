@@ -54,6 +54,7 @@ struct BetaSeriesClient {
         
         _ = semaphore.wait(timeout: .distantFuture)
         let reply = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)! as String
+        print(reply)
         if let dataJson = convertStringToDictionary(json: reply) {
             return dataJson
         }
