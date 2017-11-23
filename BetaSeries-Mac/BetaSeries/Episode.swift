@@ -15,16 +15,17 @@ class Episode {
     private var Nb:Int
     private var Description:String
     private var Special:Int
+    private var Link:String
     private var Date:String // -> Date Later
     
-    init( id:Int, title:String, saison:Int, nb:Int, description:String, special:Int, date:String ) {
-    
+    init( id:Int, title:String, saison:Int, nb:Int, description:String, special:Int, link:String, date:String ) {
         self.Id = id
         self.Title = title
         self.Saison = saison
         self.Nb = nb
         self.Description = description
         self.Special = special
+        self.Link = link
         self.Date = date
     }
     

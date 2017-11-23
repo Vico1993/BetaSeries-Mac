@@ -18,5 +18,9 @@ class Show {
         self.Title = title
         self.EpisodesUnseen = episodesunseen
     }
+ 
+    func getNbEpisode( ) -> Int {
+        return self.EpisodesUnseen.count
+    }
     
 }
