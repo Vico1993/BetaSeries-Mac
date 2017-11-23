@@ -6,6 +6,9 @@
 //  Copyright © 2017 Victor Piolin. All rights reserved.
 //
 
+// TODO :
+// Gestion des erreurs
+
 import Foundation
 
 struct BetaSeriesClient {
