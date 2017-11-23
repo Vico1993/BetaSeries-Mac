@@ -14,6 +14,8 @@
 		1DC7A8FD1FC5E08E00ED8AD3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7A8FC1FC5E08E00ED8AD3 /* LoginViewController.swift */; };
 		1DC7A9001FC5E3C100ED8AD3 /* BetaSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7A8FF1FC5E3C100ED8AD3 /* BetaSeries.swift */; };
 		1DC7A9021FC5F4C100ED8AD3 /* ToolBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7A9011FC5F4C100ED8AD3 /* ToolBox.swift */; };
+		1DC7A9071FC6F37200ED8AD3 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7A9061FC6F37200ED8AD3 /* Show.swift */; };
+		1DC7A9091FC6F38B00ED8AD3 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7A9081FC6F38B00ED8AD3 /* Episode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		1DC7A8FF1FC5E3C100ED8AD3 /* BetaSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaSeries.swift; sourceTree = "<group>"; };
 		1DC7A9011FC5F4C100ED8AD3 /* ToolBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBox.swift; sourceTree = "<group>"; };
 		1DC7A9051FC5FCC200ED8AD3 /* BetaSeries-Mac-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetaSeries-Mac-Bridging-Header.h"; sourceTree = "<group>"; };
+		1DC7A9061FC6F37200ED8AD3 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		1DC7A9081FC6F38B00ED8AD3 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			children = (
 				1DC7A8FF1FC5E3C100ED8AD3 /* BetaSeries.swift */,
 				1DC7A9011FC5F4C100ED8AD3 /* ToolBox.swift */,
+				1DC7A9061FC6F37200ED8AD3 /* Show.swift */,
+				1DC7A9081FC6F38B00ED8AD3 /* Episode.swift */,
 			);
 			path = BetaSeries;
 			sourceTree = "<group>";
@@ -153,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DC7A9071FC6F37200ED8AD3 /* Show.swift in Sources */,
 				1DC7A9021FC5F4C100ED8AD3 /* ToolBox.swift in Sources */,
+				1DC7A9091FC6F38B00ED8AD3 /* Episode.swift in Sources */,
 				1DC7A8FD1FC5E08E00ED8AD3 /* LoginViewController.swift in Sources */,
 				1DC7A8EF1FC5DECE00ED8AD3 /* BetaSeries_Mac.xcdatamodeld in Sources */,
 				1DC7A9001FC5E3C100ED8AD3 /* BetaSeries.swift in Sources */,
