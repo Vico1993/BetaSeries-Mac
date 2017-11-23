@@ -103,8 +103,8 @@ struct BetaSeriesClient {
         
     }
     
-    func GetEpisodesOfSerie( ) {
+    // A voir..
+    func GetEpisodesOfSerie( id:Int ) {
         
     }
-    
 }
