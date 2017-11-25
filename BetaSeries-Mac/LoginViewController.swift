@@ -13,12 +13,12 @@ class LoginViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        
-        print("LoginView")
-        var client:BetaSeriesClient = BetaSeriesClient(username: "Vico1993", password: "victor1993", ApiKey: "ee7422ce11a2")
-        print("After Init")
-        print( client.token )
-        client.GetListSeries()
+//
+//        print("LoginView")
+//        let client:BetaSeriesClient = BetaSeriesClient(username: "Vico1993", password: "victor1993", ApiKey: "ee7422ce11a2")
+//        print("After Init")
+//        print( client.token )
+//        client.GetListSeries()
     }
     
 }

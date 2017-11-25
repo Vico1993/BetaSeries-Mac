@@ -10,6 +10,7 @@
 // Gestion des erreurs
 
 import Foundation
+import CoreData
 
 struct BetaSeriesClient {
     
@@ -73,22 +74,22 @@ struct BetaSeriesClient {
         if let ret = MakeRequestWith(url: url, requestMethod: "GET", params:params) {
             let shows = ret["shows"] as? [[String: Any]] ?? []
             for show in shows {
-                let id = show["id"] as! Int
-                let title = show["title"] as! String
-                var unseen:[Episode] = []
+                let id                  = show["id"] as! Int
+                let title               = show["title"] as! String
+                var unseen:[Episode]    = []
                 
                 let showsUnseen = show["unseen"] as? [[String: Any]] ?? []
                 for showsEpisode in showsUnseen {
                     unseen.append(
                         Episode(
-                            id: showsEpisode["id"] as! Int,
-                            title: showsEpisode["title"] as! String,
-                            saison: showsEpisode["season"] as! Int,
-                            nb: showsEpisode["episode"] as! Int,
-                            description: showsEpisode["description"] as! String,
-                            special: showsEpisode["special"] as! Int,
-                            link: showsEpisode["resource_url"] as! String,
-                            date: showsEpisode["date"] as! String
+                            id          : showsEpisode["id"] as! Int,
+                            title       : showsEpisode["title"] as! String,
+                            saison      : showsEpisode["season"] as! Int,
+                            nb          : showsEpisode["episode"] as! Int,
+                            description : showsEpisode["description"] as! String,
+                            special     : showsEpisode["special"] as! Int,
+                            link        : showsEpisode["resource_url"] as! String,
+                            date        : showsEpisode["date"] as! String
                         )
                     )
                 }
