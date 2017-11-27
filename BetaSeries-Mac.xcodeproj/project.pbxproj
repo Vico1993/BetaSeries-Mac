@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1DB414451FCC57A7007BF988 /* ListShowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB414431FCC57A7007BF988 /* ListShowController.swift */; };
+		1DB414481FCC5BDD007BF988 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB414471FCC5BDD007BF988 /* Config.swift */; };
 		1DC7A8EA1FC5DECE00ED8AD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7A8E91FC5DECE00ED8AD3 /* AppDelegate.swift */; };
 		1DC7A8EF1FC5DECE00ED8AD3 /* BetaSeries_Mac.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7A8ED1FC5DECE00ED8AD3 /* BetaSeries_Mac.xcdatamodeld */; };
 		1DC7A8F11FC5DECE00ED8AD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7A8F01FC5DECE00ED8AD3 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		1DB414431FCC57A7007BF988 /* ListShowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListShowController.swift; sourceTree = "<group>"; };
+		1DB414471FCC5BDD007BF988 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		1DC7A8E61FC5DECE00ED8AD3 /* BetaSeries-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BetaSeries-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC7A8E91FC5DECE00ED8AD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DC7A8EE1FC5DECE00ED8AD3 /* BetaSeries_Mac.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BetaSeries_Mac.xcdatamodel; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				1DC7A9011FC5F4C100ED8AD3 /* ToolBox.swift */,
 				1DC7A9061FC6F37200ED8AD3 /* Show.swift */,
 				1DC7A9081FC6F38B00ED8AD3 /* Episode.swift */,
+				1DB414471FCC5BDD007BF988 /* Config.swift */,
 			);
 			path = BetaSeries;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				1DC7A9071FC6F37200ED8AD3 /* Show.swift in Sources */,
 				1DC7A9021FC5F4C100ED8AD3 /* ToolBox.swift in Sources */,
+				1DB414481FCC5BDD007BF988 /* Config.swift in Sources */,
 				1DC7A9091FC6F38B00ED8AD3 /* Episode.swift in Sources */,
 				1DC7A8FD1FC5E08E00ED8AD3 /* LoginViewController.swift in Sources */,
 				1DB414451FCC57A7007BF988 /* ListShowController.swift in Sources */,

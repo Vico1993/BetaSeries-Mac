@@ -30,10 +30,11 @@ class LoginViewController: NSViewController {
         let password = PasswordInput.stringValue
         
         if username != "" && password != "" {
-            let client:BetaSeriesClient = BetaSeriesClient(username: username, password: password, ApiKey: "ee7422ce11a2")
+            let client:BetaSeriesClient = BetaSeriesClient(username: username, password: password)
             
             if client.IsConnect() {
                 // Save Data
+                
                 // change of view
             } else {
                 ErrorInput.stringValue = "Error append with your credentials. Please Check and try again."

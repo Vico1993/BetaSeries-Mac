@@ -13,15 +13,22 @@ import Foundation
 import CoreData
 
 struct BetaSeriesClient {
+
+    var APIKey:String {
+        get {
+            return Config.api_key
+        }
+    }
+    var base_url:String {
+        get {
+            return Config.base_url
+        }
+    }
     
-    var APIKey:String
     var token:String = ""
-    let base_url:String = "https://api.betaseries.com/"
     
-    init( username:String, password:String, ApiKey:String ) {
-        // Set ApiKey from the user
-        APIKey = ApiKey
-        
+    // Get the token for the User.
+    init( username:String, password:String) {
         let url = base_url + "members/auth"
         let params:[String:String] = [
             "login": username,
@@ -30,6 +37,11 @@ struct BetaSeriesClient {
         if let ret = MakeRequestWith(url: url, requestMethod: "POST", params:params) {
             token = ret[ "token" ] as? String ?? ""
         }
+    }
+    
+    // After change Page
+    init ( withToken:String ) {
+        token = withToken
     }
     
     func MakeRequestWith( url:String, requestMethod:String, params:[String:String] ) -> [String : AnyObject]? {
