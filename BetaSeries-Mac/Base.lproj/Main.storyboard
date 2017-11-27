@@ -689,27 +689,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="294" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField identifier="LoginTitle" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rnq-yC-uqZ">
+                            <textField identifier="LoginTitle" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rnq-yC-uqZ">
                                 <rect key="frame" x="59" y="226" width="177" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="CRz-gd-l8M"/>
+                                    <constraint firstAttribute="width" constant="173" id="efJ-QG-pYb"/>
+                                </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="BetaSeries - Mac" id="bPd-f0-Bns">
                                     <font key="font" size="20" name="HelveticaNeue"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" red="0.21386010112931075" green="0.45558399767981084" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField identifier="LoginError" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sl9-lN-ANb">
+                            <textField identifier="LoginError" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sl9-lN-ANb">
                                 <rect key="frame" x="47" y="30" width="201" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="OoG-eu-ly5"/>
+                                    <constraint firstAttribute="width" constant="197" id="clg-nM-pg3"/>
+                                </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Error : " id="r9R-4F-yrH">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" red="0.83838649611398963" green="0.14194481637687462" blue="0.1560189160272655" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <secureTextField identifier="LoginPassword" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uim-wr-rlK">
+                            <secureTextField identifier="LoginPassword" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uim-wr-rlK">
                                 <rect key="frame" x="49" y="124" width="197" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="7g3-fO-xvZ"/>
+                                    <constraint firstAttribute="width" constant="197" id="c6W-su-1zi"/>
+                                </constraints>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" placeholderString="Password" usesSingleLineMode="YES" bezelStyle="round" id="f9B-oI-edS">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -719,18 +728,24 @@
                                     </allowedInputSourceLocales>
                                 </secureTextFieldCell>
                             </secureTextField>
-                            <textField identifier="LoginUsername" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xcw-tP-G3A">
+                            <textField identifier="LoginUsername" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xcw-tP-G3A">
                                 <rect key="frame" x="49" y="163" width="197" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="M7d-T3-HCn"/>
+                                    <constraint firstAttribute="width" constant="197" id="MGu-Rd-6eL"/>
+                                </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="Username or Email" bezelStyle="round" id="Wzu-bB-obj">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button identifier="LoginConnectButton" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n5c-yT-aeZ">
+                            <button identifier="LoginConnectButton" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="n5c-yT-aeZ">
                                 <rect key="frame" x="92" y="64" width="110" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="6R2-Ty-Ela"/>
+                                    <constraint firstAttribute="height" constant="21" id="rsz-bN-2Zr"/>
+                                </constraints>
                                 <buttonCell key="cell" type="push" title="Connection" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1zf-kD-nrY">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -740,6 +755,24 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uim-wr-rlK" secondAttribute="trailing" constant="48" id="3pU-Q3-dDO"/>
+                            <constraint firstItem="n5c-yT-aeZ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="98" id="5W2-1G-uLT"/>
+                            <constraint firstItem="uim-wr-rlK" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="49" id="6Ke-bc-OWh"/>
+                            <constraint firstAttribute="trailing" secondItem="Rnq-yC-uqZ" secondAttribute="trailing" constant="60" id="B4L-k1-KJF"/>
+                            <constraint firstItem="sl9-lN-ANb" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="49" id="CAa-sb-EeC"/>
+                            <constraint firstItem="Rnq-yC-uqZ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="J9N-mN-BFU"/>
+                            <constraint firstAttribute="bottom" secondItem="sl9-lN-ANb" secondAttribute="bottom" constant="30" id="Vul-8E-lzf"/>
+                            <constraint firstItem="Rnq-yC-uqZ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="61" id="Xjl-wL-Y0a"/>
+                            <constraint firstItem="xcw-tP-G3A" firstAttribute="top" secondItem="Rnq-yC-uqZ" secondAttribute="bottom" constant="41" id="bAc-wg-Zib"/>
+                            <constraint firstItem="uim-wr-rlK" firstAttribute="top" secondItem="xcw-tP-G3A" secondAttribute="bottom" constant="17" id="cmG-86-tZu"/>
+                            <constraint firstAttribute="trailing" secondItem="sl9-lN-ANb" secondAttribute="trailing" constant="48" id="h2i-ie-rJA"/>
+                            <constraint firstItem="xcw-tP-G3A" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="49" id="jT3-1F-s8d"/>
+                            <constraint firstAttribute="trailing" secondItem="n5c-yT-aeZ" secondAttribute="trailing" constant="98" id="p3x-BY-9Hv"/>
+                            <constraint firstAttribute="trailing" secondItem="xcw-tP-G3A" secondAttribute="trailing" constant="48" id="syo-h7-Dzx"/>
+                            <constraint firstItem="sl9-lN-ANb" firstAttribute="top" secondItem="n5c-yT-aeZ" secondAttribute="bottom" constant="24" id="tW8-4g-mHX"/>
+                            <constraint firstItem="n5c-yT-aeZ" firstAttribute="top" secondItem="uim-wr-rlK" secondAttribute="bottom" constant="32" id="y4S-FG-pKX"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="ConnectionButton" destination="n5c-yT-aeZ" id="aaE-xu-AZo"/>

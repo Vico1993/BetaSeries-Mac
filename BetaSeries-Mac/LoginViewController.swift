@@ -14,17 +14,36 @@ class LoginViewController: NSViewController {
     @IBOutlet weak var PasswordInput: NSSecureTextField!
     @IBOutlet weak var ErrorInput: NSTextField!
     @IBOutlet weak var ConnectionButton: NSButton!
-    @IBAction func ConnectionButtonClick(_ sender: NSButton) {
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-//
+        
+        // Hidding the ErrorLabel at the begining.
+        ErrorInput.isHidden = true
+        
 //        print("LoginView")
 //        let client:BetaSeriesClient = BetaSeriesClient(username: "Vico1993", password: "victor1993", ApiKey: "ee7422ce11a2")
 //        print("After Init")
 //        print( client.token )
 //        client.GetListSeries()
+    }
+    
+    @IBAction func ConnectionButtonClick(_ sender: NSButton) {
+        ErrorInput.isHidden = true
+        
+        let username = UsernameInput.stringValue
+        let password = PasswordInput.stringValue
+        
+        if username != "" && password != "" {
+            
+        } else {
+            ErrorInput.stringValue = "Thanks to check your username and password."
+            ErrorInput.isHidden = false
+        }
+        
+        print( "Username = \(username)" )
+        print( "Password = \(password)" )
     }
     
 }
