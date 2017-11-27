@@ -11,12 +11,13 @@ import Cocoa
 class ListShowController: NSViewController {
 
     var client:BetaSeriesClient? = nil
+    @IBOutlet weak var ListShowTable: NSTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
         
-        // Récupération du TOKEN
+        // get client From Token
         let data = getFromCoreData(withEntity: "BetaClient") as! [BetaClient]
         for _data in data {
             if (_data.token != nil) {
@@ -24,5 +25,7 @@ class ListShowController: NSViewController {
             }
         }
     }
+    
+    
     
 }
