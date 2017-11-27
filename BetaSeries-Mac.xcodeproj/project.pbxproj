@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DB414451FCC57A7007BF988 /* ListShowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB414431FCC57A7007BF988 /* ListShowController.swift */; };
 		1DC7A8EA1FC5DECE00ED8AD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7A8E91FC5DECE00ED8AD3 /* AppDelegate.swift */; };
 		1DC7A8EF1FC5DECE00ED8AD3 /* BetaSeries_Mac.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7A8ED1FC5DECE00ED8AD3 /* BetaSeries_Mac.xcdatamodeld */; };
 		1DC7A8F11FC5DECE00ED8AD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC7A8F01FC5DECE00ED8AD3 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DB414431FCC57A7007BF988 /* ListShowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListShowController.swift; sourceTree = "<group>"; };
 		1DC7A8E61FC5DECE00ED8AD3 /* BetaSeries-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BetaSeries-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC7A8E91FC5DECE00ED8AD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DC7A8EE1FC5DECE00ED8AD3 /* BetaSeries_Mac.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BetaSeries_Mac.xcdatamodel; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				1DC7A8ED1FC5DECE00ED8AD3 /* BetaSeries_Mac.xcdatamodeld */,
 				1DC7A8FC1FC5E08E00ED8AD3 /* LoginViewController.swift */,
 				1DC7A9051FC5FCC200ED8AD3 /* BetaSeries-Mac-Bridging-Header.h */,
+				1DB414431FCC57A7007BF988 /* ListShowController.swift */,
 			);
 			path = "BetaSeries-Mac";
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				1DC7A9021FC5F4C100ED8AD3 /* ToolBox.swift in Sources */,
 				1DC7A9091FC6F38B00ED8AD3 /* Episode.swift in Sources */,
 				1DC7A8FD1FC5E08E00ED8AD3 /* LoginViewController.swift in Sources */,
+				1DB414451FCC57A7007BF988 /* ListShowController.swift in Sources */,
 				1DC7A8EF1FC5DECE00ED8AD3 /* BetaSeries_Mac.xcdatamodeld in Sources */,
 				1DC7A9001FC5E3C100ED8AD3 /* BetaSeries.swift in Sources */,
 				1DC7A8EA1FC5DECE00ED8AD3 /* AppDelegate.swift in Sources */,
