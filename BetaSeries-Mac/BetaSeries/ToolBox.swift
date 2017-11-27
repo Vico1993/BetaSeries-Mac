@@ -73,8 +73,24 @@ func saveInCordata( entity:String, param:String, IndexPath:String ) -> Bool {
     
     do {
         try context.save()
+        return true
     } catch let error as NSError {
         print("Could not save. \(error), \(error.userInfo)")
+    }
+    
+    return false
+}
+
+func getFromCoreData( withEntity:String ) -> Any {
+    
+    let appDelegate = NSApplication.shared.delegate as! AppDelegate
+    let context = appDelegate.persistentContainer.viewContext
+    let fetchRequest = NSFetchRequest<NSManagedObject>( entityName: withEntity )
+    
+    do {
+        return try context.fetch( fetchRequest )
+    } catch let error as NSError {
+        print("Could not fetch. \(error), \(error.userInfo)")
     }
     
     return false
