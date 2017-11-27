@@ -104,6 +104,10 @@ struct BetaSeriesClient {
         
     }
     
+    func IsConnect( ) -> Bool {
+        return ( token != "" ) ? true : false
+    }
+    
     // A voir..
     func GetEpisodesOfSerie( id:Int ) {
         

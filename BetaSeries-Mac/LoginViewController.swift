@@ -21,12 +21,6 @@ class LoginViewController: NSViewController {
         
         // Hidding the ErrorLabel at the begining.
         ErrorInput.isHidden = true
-        
-//        print("LoginView")
-//        let client:BetaSeriesClient = BetaSeriesClient(username: "Vico1993", password: "victor1993", ApiKey: "ee7422ce11a2")
-//        print("After Init")
-//        print( client.token )
-//        client.GetListSeries()
     }
     
     @IBAction func ConnectionButtonClick(_ sender: NSButton) {
@@ -36,7 +30,15 @@ class LoginViewController: NSViewController {
         let password = PasswordInput.stringValue
         
         if username != "" && password != "" {
+            let client:BetaSeriesClient = BetaSeriesClient(username: username, password: password, ApiKey: "ee7422ce11a2")
             
+            if client.IsConnect() {
+                // Save Data
+                // change of view
+            } else {
+                ErrorInput.stringValue = "Error append with your credentials. Please Check and try again."
+                ErrorInput.isHidden = false
+            }
         } else {
             ErrorInput.stringValue = "Thanks to check your username and password."
             ErrorInput.isHidden = false
