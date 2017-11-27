@@ -785,10 +785,10 @@
             </objects>
             <point key="canvasLocation" x="26" y="256"/>
         </scene>
-        <!--View Controller-->
+        <!--List Show Controller-->
         <scene sceneID="dHi-bo-xzg">
             <objects>
-                <viewController id="F5s-hd-TQ3" sceneMemberID="viewController">
+                <viewController id="F5s-hd-TQ3" customClass="ListShowController" customModule="BetaSeries_Mac" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="88z-e3-G7o">
                         <rect key="frame" x="0.0" y="0.0" width="294" height="513"/>
                         <autoresizingMask key="autoresizingMask"/>
