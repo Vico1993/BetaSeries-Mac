@@ -95,3 +95,17 @@ func getFromCoreData( withEntity:String ) -> Any {
     
     return false
 }
+
+
+// LoadViewController
+
+func loadAnController( identfier:String ) -> NSViewController {
+    let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
+    let identifier = NSStoryboard.SceneIdentifier(rawValue: identfier)
+    
+    let identifierString = identifier._rawValue
+    guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? NSViewController else {
+        fatalError("Can't find my controller... \(identifierString)")
+    }
+    return viewcontroller
+}

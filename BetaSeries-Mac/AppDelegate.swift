@@ -40,7 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = NSImage(named:NSImage.Name("StatusImage"))
             button.action = #selector(togglePopover(_:))
         }
-        popover.contentViewController = LoginViewController.freshController()
+        popover.contentViewController = loadAnController(identfier: "ListShowController")
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
