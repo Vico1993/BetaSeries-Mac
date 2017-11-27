@@ -35,12 +35,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        // DEBUG
+        cleanCoreData(withEntity: "BetaClient")
+        
         // Insert code here to initialize your application
         if let button = statusItem.button {
             button.image = NSImage(named:NSImage.Name("StatusImage"))
             button.action = #selector(togglePopover(_:))
         }
-        popover.contentViewController = loadAnController(identfier: "ListShowController")
+        popover.contentViewController = loadAnController(identfier: "LoginViewController")
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

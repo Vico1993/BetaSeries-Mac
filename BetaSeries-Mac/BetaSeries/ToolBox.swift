@@ -92,13 +92,27 @@ func getFromCoreData( withEntity:String ) -> Any {
     } catch let error as NSError {
         print("Could not fetch. \(error), \(error.userInfo)")
     }
+
+    return false
+}
+
+func cleanCoreData ( withEntity:String ) -> Bool {
+    let appDelegate = NSApplication.shared.delegate as! AppDelegate
+    let context = appDelegate.persistentContainer.viewContext
+    let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: withEntity)
+    let request = NSBatchDeleteRequest(fetchRequest: fetch)
     
+    do {
+        try context.execute(request)
+        return true
+    } catch let error as NSError {
+        print("Could not fetch. \(error), \(error.userInfo)")
+    }
     return false
 }
 
 
 // LoadViewController
-
 func loadAnController( identfier:String ) -> NSViewController {
     let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
     let identifier = NSStoryboard.SceneIdentifier(rawValue: identfier)
@@ -108,4 +122,14 @@ func loadAnController( identfier:String ) -> NSViewController {
         fatalError("Can't find my controller... \(identifierString)")
     }
     return viewcontroller
+}
+
+// Change ViewController
+func changeViewWith( identifer:String ) {
+    let appDelegate = NSApplication.shared.delegate as! AppDelegate
+    do {
+        appDelegate.popover.contentViewController = loadAnController(identfier: identifer)
+    } catch let error as NSError {
+        print("Could not change of View. \(error), \(error.userInfo)")
+    }
 }

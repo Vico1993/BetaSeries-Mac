@@ -18,7 +18,7 @@ class LoginViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        
+    
         // Hidding the ErrorLabel at the begining.
         ErrorInput.isHidden = true
     }
@@ -35,7 +35,8 @@ class LoginViewController: NSViewController {
             if client.IsConnect() {
                 // Save Data
                 if saveInCordata(entity: "BetaClient", param: client.token, IndexPath: "token") {
-                    // change of view
+                    // If everything is Cool, go switch
+                    changeViewWith( identifer:"ListShowController" )
                 } else {
                     ErrorInput.stringValue = "Something Append, Check the log.."
                     ErrorInput.isHidden = false
