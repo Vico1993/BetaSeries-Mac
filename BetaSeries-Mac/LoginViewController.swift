@@ -34,8 +34,12 @@ class LoginViewController: NSViewController {
             
             if client.IsConnect() {
                 // Save Data
-                
-                // change of view
+                if saveInCordata(entity: "BetaClient", param: client.token, IndexPath: "token") {
+                    // change of view
+                } else {
+                    ErrorInput.stringValue = "Something Append, Check the log.."
+                    ErrorInput.isHidden = false
+                }
             } else {
                 ErrorInput.stringValue = "Error append with your credentials. Please Check and try again."
                 ErrorInput.isHidden = false

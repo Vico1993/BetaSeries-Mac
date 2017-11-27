@@ -7,6 +7,13 @@
 //
 
 import Foundation
+import Cocoa
+
+// Config Application
+struct Config {
+    static let base_url = "https://api.betaseries.com/"
+    static let api_key = "ee7422ce11a2"
+}
 
 func var_dump(_ data:[String:Any] ) {
     data.forEach({ (key:String, val:Any) in
@@ -49,4 +56,26 @@ extension String {
         
         return String(format: hash as String)
     }
+}
+
+
+// MARK Handle : CoreData
+func saveInCordata( entity:String, param:String, IndexPath:String ) -> Bool {
+    
+    // Save Data
+    let appDelegate = NSApplication.shared.delegate as! AppDelegate
+    
+    let context = appDelegate.persistentContainer.viewContext
+    let entity = NSEntityDescription.entity(forEntityName: entity, in: context)!
+    let BetaClient = NSManagedObject(entity: entity, insertInto: context)
+    
+    BetaClient.setValue(param, forKeyPath: IndexPath)
+    
+    do {
+        try context.save()
+    } catch let error as NSError {
+        print("Could not save. \(error), \(error.userInfo)")
+    }
+    
+    return false
 }
