@@ -10,6 +10,12 @@ import Cocoa
 
 class LoginViewController: NSViewController {
 
+    @IBOutlet weak var UsernameInput: NSTextField!
+    @IBOutlet weak var PasswordInput: NSSecureTextField!
+    @IBOutlet weak var ErrorInput: NSTextField!
+    @IBOutlet weak var ConnectionButton: NSButton!
+    @IBAction func ConnectionButtonClick(_ sender: NSButton) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
